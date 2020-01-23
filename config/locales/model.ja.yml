@@ -1,7 +1,7 @@
 ja:
   activerecord:
     models:
-      blog: ブログ
+      picture: ピクチャー
       user: ユーザー
     attributes:
       picture:
