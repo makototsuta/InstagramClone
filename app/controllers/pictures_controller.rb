@@ -10,6 +10,7 @@ class PicturesController < ApplicationController
   # GET /pictures/1
   # GET /pictures/1.json
   def show
+    @favorite = current_user.favorites.find_by(picture_id: @picture.id)
   end
 
   # GET /pictures/new
@@ -24,17 +25,18 @@ class PicturesController < ApplicationController
   # POST /pictures
   # POST /pictures.json
   def create
-    @picture = Picture.new(picture_params)
+    @picture = current_user.pictures.build(picture_params)
     if params[:back]
       render :new
     else
-    respond_to do |format|
-      if @picture.save
-        format.html { redirect_to @picture, notice: 'Picture was successfully created.' }
-        format.json { render :show, status: :created, location: @picture }
-      else
-        format.html { render :new }
-        format.json { render json: @picture.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @picture.save
+          format.html { redirect_to @picture, notice: 'Picture was successfully created.' }
+          format.json { render :show, status: :created, location: @picture }
+        else
+          format.html { render :new }
+          format.json { render json: @picture.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -64,8 +66,8 @@ class PicturesController < ApplicationController
   end
 
   def confirm
-    @blog = Blog.new(blog_params)
-    render :new if @blog.invalid?
+    @picture = current_user.pictures.build(picture_params)
+    render :new if @picture.invalid?
   end
 
   private
