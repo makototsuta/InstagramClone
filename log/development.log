@@ -1880,3 +1880,1823 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 100ms (Views: 96.0ms | ActiveRecord: 0.5ms)
 
 
+Started DELETE "/sessions/3" for ::1 at 2020-01-25 20:43:16 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Wc0f6xqhXdZY9JaI/IwJCbI4FJUIvKQ6zRO1XVGmqeL0CaIttGyTyyof/H8RaBQTiwrfFwoVi3VoGYlwotOzhw==", "id"=>"3"}
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2020-01-25 20:43:16 +0900
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (15.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 462ms (Views: 457.3ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/sessions" for ::1 at 2020-01-25 20:43:27 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F7jC4kCCcPCPNMUUtW14e8OjAFIy2s9pDhK9t5b/BL66fH8k7k++7f3fr+NYiWVh+pHL0DBz4CarGIGaZYoe2w==", "session"=>{"email"=>"makoto@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "makoto@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 78ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/users/2" for ::1 at 2020-01-25 20:43:27 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 52ms (Views: 46.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/2" for ::1 at 2020-01-25 20:43:31 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 44ms (Views: 39.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/2" for ::1 at 2020-01-25 20:45:13 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 20:45:15 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:17
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  Rendered pictures/index.html.erb within layouts/application (23.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 89ms (Views: 76.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/2" for ::1 at 2020-01-25 20:45:22 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 43ms (Views: 36.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 20:45:39 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  Rendered pictures/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 60ms (Views: 57.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pictures/new" for ::1 at 2020-01-25 20:45:42 +0900
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/_form.html.erb (6.8ms)
+  Rendered pictures/new.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 64ms (Views: 60.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/pictures/confirm" for ::1 at 2020-01-25 20:45:50 +0900
+Processing by PicturesController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"41IjWY5L0oip4RmhgiPoYK4H4MOrnwWo1gMZTYJ5iRGqyMHf+WH+WPIu+8AS///wlPmLYjfCMwwQzA9QFLNWdg==", "picture"=>{"title"=>"bbbb", "content"=>"bbbbbb", "image"=>"", "user_id"=>""}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering pictures/confirm.html.erb within layouts/application
+  Rendered pictures/confirm.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 100ms (Views: 80.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/pictures" for ::1 at 2020-01-25 20:45:52 +0900
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VxmjI2fx60OZ2HWetj8+hSRINFCPDZucd6ugHVe0wVb63R7lyTwlXuszH2lb2yOfHXr/0o2ktNPSoZwwpMHbMw==", "picture"=>{"title"=>"bbbb", "content"=>"bbbbbb"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pictures_controller.rb:33
+  [1m[36mPicture Create (1.6ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "bbbb"], ["content", "bbbbbb"], ["user_id", 2], ["created_at", "2020-01-25 20:45:52.335199"], ["updated_at", "2020-01-25 20:45:52.335199"]]
+  ↳ app/controllers/pictures_controller.rb:33
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pictures_controller.rb:33
+Redirected to http://localhost:3000/pictures/2
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/pictures/2" for ::1 at 2020-01-25 20:45:52 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:76
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 2], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 58ms (Views: 29.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 20:45:56 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (1.1ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:17
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  Rendered pictures/index.html.erb within layouts/application (10.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 59ms (Views: 52.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/pictures/2" for ::1 at 2020-01-25 20:45:59 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPicture Load (0.9ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:76
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.9ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 2], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 57ms (Views: 49.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 20:46:02 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  Rendered pictures/index.html.erb within layouts/application (4.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 48ms (Views: 43.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pictures/1" for ::1 at 2020-01-25 20:46:03 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:76
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 2], ["picture_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 20:46:14 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:17
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  Rendered pictures/index.html.erb within layouts/application (14.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 95ms (Views: 85.9ms | ActiveRecord: 7.0ms)
+
+
+Started DELETE "/sessions/2" for ::1 at 2020-01-25 20:46:16 +0900
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M2hmETEMZmMg6DkVd6X+6N2OgcHfX8003W3+pnIc41aerNvXn8GoflIDU+KaQePy5LxKQ9324nt4Z8KLgWn5Mw==", "id"=>"2"}
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2020-01-25 20:46:16 +0900
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2020-01-25 20:47:12 +0900
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 109ms (Views: 107.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 20:47:15 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.7ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  Rendered pictures/index.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/sessions/new" for ::1 at 2020-01-25 20:47:17 +0900
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for ::1 at 2020-01-25 20:47:26 +0900
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7jItlv18vYVkvzsIeI7M9QR9J92iMsTtgoV3MwbI02Ox5n/bufQkhfit7CyhlyHlG/QYWXWNePOrplF2Pvgdsg==", "session"=>{"email"=>"shibao@dic.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shibao@dic.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 58ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2020-01-25 20:47:26 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 96ms (Views: 82.4ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 20:47:30 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  Rendered pictures/index.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 61ms (Views: 55.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/pictures/new" for ::1 at 2020-01-25 20:47:34 +0900
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/_form.html.erb (3.6ms)
+  Rendered pictures/new.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/pictures/confirm" for ::1 at 2020-01-25 20:47:39 +0900
+Processing by PicturesController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CZJljJWuwCLo7njzb4guldnVKEJCUDUHNXdxWw8zvwBACIcK4oTs8rMhmpL/VDkF4ytD494NA6PzuGdGmflgZw==", "picture"=>{"title"=>"ccccc", "content"=>"cccccc", "image"=>"", "user_id"=>""}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering pictures/confirm.html.erb within layouts/application
+  Rendered pictures/confirm.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pictures" for ::1 at 2020-01-25 20:47:42 +0900
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DtDCUMhQSoju/KhVjiVYSGtswsjxCSPjQbU7BqFKY4qjFH+WZp2ElZwXwqJjwUVSUl4JSvOgDKzkvwcrUj957w==", "picture"=>{"title"=>"ccccc", "content"=>"cccccc"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pictures_controller.rb:33
+  [1m[36mPicture Create (0.4ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "ccccc"], ["content", "cccccc"], ["user_id", 1], ["created_at", "2020-01-25 20:47:42.328150"], ["updated_at", "2020-01-25 20:47:42.328150"]]
+  ↳ app/controllers/pictures_controller.rb:33
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pictures_controller.rb:33
+Redirected to http://localhost:3000/pictures/3
+Completed 302 Found in 7ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/pictures/3" for ::1 at 2020-01-25 20:47:42 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:76
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 1], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 20:47:55 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  Rendered pictures/index.html.erb within layouts/application (25.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 82ms (Views: 79.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pictures/3" for ::1 at 2020-01-25 20:47:57 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:76
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 1], ["picture_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 40.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 20:47:59 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:17
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  Rendered pictures/index.html.erb within layouts/application (9.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pictures/2" for ::1 at 2020-01-25 20:48:00 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:76
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.7ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 1], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 43ms (Views: 37.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 20:48:03 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  Rendered pictures/index.html.erb within layouts/application (3.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pictures/1" for ::1 at 2020-01-25 20:48:04 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:76
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 1], ["picture_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 44ms (Views: 39.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 20:48:05 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  Rendered pictures/index.html.erb within layouts/application (6.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 45ms (Views: 41.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pictures/1" for ::1 at 2020-01-25 20:50:13 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:76
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 1], ["picture_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 71ms (Views: 65.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/favorites?picture_id=1" for ::1 at 2020-01-25 20:50:16 +0900
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"pu8MoGhGyXaZy5FdijTXdZium+YDDULo5+RVB3w+Eb8LK7FmxosHa+sg+6pn0MpvoZxQZAGkbadC7mkqj0sL2g==", "picture_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:4
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/favorites_controller.rb:4
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 5.0ms)
+
+
+  
+NoMethodError (undefined method `picture' for #<Favorite:0x00007ffb96cc31b8>
+Did you mean?  picture_id):
+  
+app/controllers/favorites_controller.rb:5:in `create'
+Started POST "/favorites?picture_id=1" for ::1 at 2020-01-25 20:50:49 +0900
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"pu8MoGhGyXaZy5FdijTXdZium+YDDULo5+RVB3w+Eb8LK7FmxosHa+sg+6pn0MpvoZxQZAGkbadC7mkqj0sL2g==", "picture_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/favorites_controller.rb:4
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 3.8ms)
+
+
+  
+NoMethodError (undefined method `picture' for #<Favorite:0x00007ffb91e67b90>
+Did you mean?  picture_id):
+  
+app/controllers/favorites_controller.rb:5:in `create'
+Started GET "/pictures/1" for ::1 at 2020-01-25 20:55:17 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:76
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 1], ["picture_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 84ms (Views: 47.6ms | ActiveRecord: 8.2ms)
+
+
+Started POST "/favorites?picture_id=1" for ::1 at 2020-01-25 20:55:18 +0900
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"QAwAwvAQ9lXfYKoArmxYggDFe5N8QFqn/kF5K+cr7rvtyL0EXt04SK2LwPdDiEWYOfewEX7pdehbS0UGFF703g==", "picture_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:4
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:4
+  [1m[36mFavorite Create (1.5ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "picture_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["picture_id", 1], ["created_at", "2020-01-25 20:55:18.837290"], ["updated_at", "2020-01-25 20:55:18.837290"]]
+  ↳ app/controllers/favorites_controller.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/favorites_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:5
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 15ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 20:55:18 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  Rendered pictures/index.html.erb within layouts/application (7.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 42ms (Views: 38.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/pictures/1" for ::1 at 2020-01-25 21:03:48 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:76
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 1], ["picture_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 227ms (Views: 208.8ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/favorites/1" for ::1 at 2020-01-25 21:03:49 +0900
+Processing by FavoritesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WyVNPRWA0ZArIWzewGjnOnOzP5eOKh2828k+gk3YC4X24fD7u00fjVnKBiktjPogSoH0FYyDMvN+wwKvvq0R4A==", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.5ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mFavorite Destroy (3.3ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 16ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 21:03:49 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:17
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:22
+  Rendered pictures/index.html.erb within layouts/application (7.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pictures/1" for ::1 at 2020-01-25 21:04:51 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.9ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:76
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 1], ["picture_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 127ms (Views: 120.6ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/favorites?picture_id=1" for ::1 at 2020-01-25 21:04:53 +0900
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"KDfwxJxNPYvg+++0BKgz4A7PzF7FiKdG2gwsfwss8NqF800CMoDzlpIQhUPpTC76N/0H3MchiAl/BhBS+Fnqvw==", "picture_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:4
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:4
+  [1m[36mFavorite Create (0.4ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "picture_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["picture_id", 1], ["created_at", "2020-01-25 21:04:53.035063"], ["updated_at", "2020-01-25 21:04:53.035063"]]
+  ↳ app/controllers/favorites_controller.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/favorites_controller.rb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:5
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 21:04:53 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (3.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pictures/2" for ::1 at 2020-01-25 21:05:03 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPicture Load (2.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:76
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.6ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 1], ["picture_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 75ms (Views: 66.5ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/favorites?picture_id=2" for ::1 at 2020-01-25 21:05:05 +0900
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"uIQGQbqGGfvAtl1YAhxX/iu9nuFQ+1J55NYktPyai4AVQLuHFEvX5rJdN6/v+ErkEo9VY1JSfTZB3BiZD++R5Q==", "picture_id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:4
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:4
+  [1m[36mFavorite Create (0.3ms)[0m  [1m[32mINSERT INTO "favorites" ("user_id", "picture_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["picture_id", 2], ["created_at", "2020-01-25 21:05:05.171742"], ["updated_at", "2020-01-25 21:05:05.171742"]]
+  ↳ app/controllers/favorites_controller.rb:4
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/favorites_controller.rb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:5
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 9ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 21:05:05 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (3.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pictures/1" for ::1 at 2020-01-25 21:05:07 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:76
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.7ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 1], ["picture_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 61ms (Views: 52.0ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/favorites/2" for ::1 at 2020-01-25 21:05:07 +0900
+Processing by FavoritesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"akGl0+PJu2E8VTP7zOy80lx34gc+yUasvZVyP7dYnG7HhRgVTQR1fE6+WQwhCKHIZUUphTxgaeMYn04SRC2GCw==", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mFavorite Destroy (0.2ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/favorites_controller.rb:9
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/favorites_controller.rb:10
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-25 21:05:07 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (3.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-26 10:28:35 +0900
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (1.8ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (119.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 5974ms (Views: 5906.4ms | ActiveRecord: 40.4ms)
+
+
+Started GET "/pictures/new" for ::1 at 2020-01-26 10:28:43 +0900
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/_form.html.erb (17.1ms)
+  Rendered pictures/new.html.erb within layouts/application (18.6ms)
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 87ms (Views: 74.5ms | ActiveRecord: 8.9ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3941957542784498265)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateContacts (20200126013348)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (17.1ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" bigserial primary key, "name" character varying, "email" character varying, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200126013348_create_contacts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200126013348"]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3941957542784498265)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/pictures" for ::1 at 2020-01-26 10:38:13 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (10.8ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (27.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (146.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 568ms (Views: 496.0ms | ActiveRecord: 49.1ms)
+
+
+Started GET "/letter_opener" for ::1 at 2020-01-26 10:38:16 +0900
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (1.1ms)
+Completed 200 OK in 124ms (Views: 118.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for ::1 at 2020-01-26 10:39:25 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (36.2ms)
+  Rendered contacts/new.html.erb within layouts/application (38.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 431ms (Views: 411.4ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/contacts" for ::1 at 2020-01-26 10:39:43 +0900
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yBD/wjq9lS757qbjMCgOACr3p9M1FFAFr1IGYp+UQiRl1EIElHBbM4sFzBTdzBMaE8VsUTe9f0oKWDpPbOFYQQ==", "contact"=>{"name"=>"DIVE君", "email"=>"test@gmail.com", "content"=>"届いてたら合格!!"}, "commit"=>"登録する"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contacts_controller.rb:30
+  [1m[36mContact Create (2.6ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "DIVE君"], ["email", "test@gmail.com"], ["content", "届いてたら合格!!"], ["created_at", "2020-01-26 10:39:43.174285"], ["updated_at", "2020-01-26 10:39:43.174285"]]
+  ↳ app/controllers/contacts_controller.rb:30
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:30
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 3.5ms)
+
+
+  
+SyntaxError (/Users/tsutamasato/workspace/insta_clone/app/mailers/contact_mailer.rb:6: syntax error, unexpected end-of-input, expecting end):
+  
+app/mailers/contact_mailer.rb:6: syntax error, unexpected end-of-input, expecting end
+app/controllers/contacts_controller.rb:31:in `block in create'
+app/controllers/contacts_controller.rb:29:in `create'
+Started GET "/contacts" for ::1 at 2020-01-26 10:40:36 +0900
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:16
+  Rendered contacts/index.html.erb within layouts/application (10.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 122ms (Views: 114.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/letter_opener" for ::1 at 2020-01-26 10:40:58 +0900
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (1.7ms)
+Completed 200 OK in 46ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/" for ::1 at 2020-01-26 10:41:01 +0900
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (0.9ms)
+Completed 200 OK in 24ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for ::1 at 2020-01-26 10:41:14 +0900
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:16
+  Rendered contacts/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/contacts/new" for ::1 at 2020-01-26 10:41:16 +0900
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (4.1ms)
+  Rendered contacts/new.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 51ms (Views: 47.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/contacts" for ::1 at 2020-01-26 10:41:25 +0900
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3xj0iqV5bG77N/jBVMzl3Jis2DZmy1j1HkUwf8fg+NKEdzT1N1pidcirgcub1FOqimZvPcT+dHHQ0xeRO/DMGA==", "contact"=>{"name"=>"DIVEE君", "email"=>"name@gmail.com", "content"=>"届いてる？"}, "commit"=>"登録する"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/contacts_controller.rb:30
+  [1m[36mContact Create (0.8ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "DIVEE君"], ["email", "name@gmail.com"], ["content", "届いてる？"], ["created_at", "2020-01-26 10:41:25.952973"], ["updated_at", "2020-01-26 10:41:25.952973"]]
+  ↳ app/controllers/contacts_controller.rb:30
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/contacts_controller.rb:30
+  Rendering contact_mailer/contact_mail.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_mail.html.erb within layouts/mailer (1.1ms)
+ContactMailer#contact_mail: processed outbound mail in 721.3ms
+Sent mail to makoto1850@gmail.com (27.8ms)
+Date: Sun, 26 Jan 2020 10:41:27 +0900
+From: from@example.com
+To: makoto1850@gmail.com
+Message-ID: <5e2cee4718d2e_1072e3fecec855b749206d@mbp.local.mail>
+Subject: =?UTF-8?Q?=E3=81=8A=E5=95=8F=E3=81=84=E5=90=88=E3=82=8F=E3=81=9B=E3=81=AE=E7=A2=BA=E8=AA=8D=E3=83=A1=E3=83=BC=E3=83=AB?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCiAgPGhlYWQ+DQogICAgPG1ldGEg
+aHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7
+IGNoYXJzZXQ9dXRmLTgiIC8+DQogICAgPHN0eWxlPg0KICAgICAgLyogRW1h
+aWwgc3R5bGVzIG5lZWQgdG8gYmUgaW5saW5lICovDQogICAgPC9zdHlsZT4N
+CiAgPC9oZWFkPg0KDQogIDxib2R5Pg0KICAgIDxoMT7jgYrllY/jgYTlkIjj
+go/jgZvjgYzlrozkuobjgZfjgb7jgZfjgZ/vvIE8L2gxPg0KDQo8aDQ+bmFt
+ZTogRElWRUXlkJs8L2g0Pg0KDQo8aDQ+44GK5ZWP44GE5ZCI44KP44Gb5YaF
+5a6544Gu56K66KqNPC9oND4NCg0KPHA+Y29udGVudDog5bGK44GE44Gm44KL
+77yfPC9wPg0KDQogIDwvYm9keT4NCjwvaHRtbD4NCg==
+
+Redirected to http://localhost:3000/contacts/2
+Completed 302 Found in 1178ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/contacts/2" for ::1 at 2020-01-26 10:41:27 +0900
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:68
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 112ms (Views: 107.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/contacts" for ::1 at 2020-01-26 10:41:30 +0900
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:16
+  Rendered contacts/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 124ms (Views: 122.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/letter_opener" for ::1 at 2020-01-26 10:41:37 +0900
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (1.1ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580002887_105234_261b066/rich" for ::1 at 2020-01-26 10:41:38 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580002887_105234_261b066", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3941957542784498265)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(3941957542784498265)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/pictures" for ::1 at 2020-01-26 11:20:54 +0900
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (3.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (109.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 679ms (Views: 617.0ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/pictures/new" for ::1 at 2020-01-26 11:20:57 +0900
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/_form.html.erb (16.1ms)
+  Rendered pictures/new.html.erb within layouts/application (17.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 86ms (Views: 83.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pictures/confirm" for ::1 at 2020-01-26 11:21:14 +0900
+Processing by PicturesController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vjc3bBeZ9Tx1JmOQn6JXuG2I5JgBlyNDIkEJHYawLn4frdXqYLPZ7C7pgfEPfkAoV3aPOZ3KFefkjh8AEHrxGQ==", "picture"=>{"title"=>"デーブ君", "content"=>"届いてる？", "image"=>"", "user_id"=>""}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering pictures/confirm.html.erb within layouts/application
+  Rendered pictures/confirm.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 74ms (Views: 66.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/pictures" for ::1 at 2020-01-26 11:21:15 +0900
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dx8mvij5nnMXKufksu+qm7IGFvNt0vFo/vwX/orPU8Pa25t4hjRQbmXBjRNfC7eBizTdcW973idb9ivTebpJpg==", "picture"=>{"title"=>"デーブ君", "content"=>"届いてる？"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pictures_controller.rb:33
+  [1m[36mPicture Create (2.3ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "デーブ君"], ["content", "届いてる？"], ["user_id", 1], ["created_at", "2020-01-26 11:21:15.952245"], ["updated_at", "2020-01-26 11:21:15.952245"]]
+  ↳ app/controllers/pictures_controller.rb:33
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pictures_controller.rb:33
+Completed 500 Internal Server Error in 202ms (ActiveRecord: 4.3ms)
+
+
+  
+NoMethodError (undefined method `picture_mail' for PictureMailer:Class):
+  
+app/controllers/pictures_controller.rb:34:in `block in create'
+app/controllers/pictures_controller.rb:32:in `create'
+Started GET "/pictures" for ::1 at 2020-01-26 11:22:35 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (58.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 119ms (Views: 105.1ms | ActiveRecord: 9.0ms)
+
+
+Started DELETE "/pictures/4" for ::1 at 2020-01-26 11:22:40 +0900
+Processing by PicturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wT2+134sCwMoFN0/O7Wb6myEoaQwfOMupNb13NY0nP5s+QMR0OHFHlr/t8jWUYbwVbZqJjLVzGEB3MnxJUGGmw==", "id"=>"4"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:77
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pictures_controller.rb:62
+  [1m[36mFavorite Load (2.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."picture_id" = $1[0m  [["picture_id", 4]]
+  ↳ app/controllers/pictures_controller.rb:62
+  [1m[36mPicture Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/pictures_controller.rb:62
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pictures_controller.rb:62
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 14ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-26 11:22:40 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (6.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pictures/new" for ::1 at 2020-01-26 11:22:41 +0900
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/_form.html.erb (3.8ms)
+  Rendered pictures/new.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 88ms (Views: 85.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/pictures/confirm" for ::1 at 2020-01-26 11:22:49 +0900
+Processing by PicturesController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5/f0DSb/+3i/nlAbcd4y2PL1mCocjMywGQR8Udc1cYOubRaLUdXXqORRsnrhAiVIyAvzi4DR+hTfy2pMQf+u5A==", "picture"=>{"title"=>"デーブ君", "content"=>"届いてる？", "image"=>"", "user_id"=>""}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering pictures/confirm.html.erb within layouts/application
+  Rendered pictures/confirm.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 55ms (Views: 48.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/pictures" for ::1 at 2020-01-26 11:22:51 +0900
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zwm8jkYFA7ZTSopIryCrCzpp7YpCuwRZ+o2ttm4CAk7KzQFI6MjNqyGh4L9CxLYRA1smCEASKxZfh5GbnXcYKw==", "picture"=>{"title"=>"デーブ君", "content"=>"届いてる？"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pictures_controller.rb:33
+  [1m[36mPicture Create (0.5ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "デーブ君"], ["content", "届いてる？"], ["user_id", 1], ["created_at", "2020-01-26 11:22:51.316025"], ["updated_at", "2020-01-26 11:22:51.316025"]]
+  ↳ app/controllers/pictures_controller.rb:33
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pictures_controller.rb:33
+  Rendering picture_mailer/picture_mail.html.erb within layouts/mailer
+  Rendered picture_mailer/picture_mail.html.erb within layouts/mailer (6.0ms)
+PictureMailer#picture_mail: processed outbound mail in 22.8ms
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 2.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Picture:0x00007f8a5e81b3d0>):
+    1: <h1>お問い合わせが完了しました！</h1>
+    2: 
+    3: <h4>name: <%= @picture.name %></h4>
+    4: 
+    5: <h4>お問い合わせ内容の確認</h4>
+    6: 
+  
+app/views/picture_mailer/picture_mail.html.erb:3:in `_app_views_picture_mailer_picture_mail_html_erb___788854079553791360_70116102257160'
+app/mailers/picture_mailer.rb:5:in `picture_mail'
+app/controllers/pictures_controller.rb:34:in `block in create'
+app/controllers/pictures_controller.rb:32:in `create'
+Started GET "/pictures" for ::1 at 2020-01-26 11:24:46 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (5.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 75ms (Views: 73.0ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/pictures/5" for ::1 at 2020-01-26 11:24:49 +0900
+Processing by PicturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3jjfk1DDChxYOyPxltijOBV25KSNailWcJ/iI2h1DvJz/GJV/g7EASrQSQZ7PL4iLEQvJo/DBhnVld4OmwAUlw==", "id"=>"5"}
+  [1m[36mPicture Load (0.5ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:77
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pictures_controller.rb:62
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."picture_id" = $1[0m  [["picture_id", 5]]
+  ↳ app/controllers/pictures_controller.rb:62
+  [1m[36mPicture Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/pictures_controller.rb:62
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pictures_controller.rb:62
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 9ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-26 11:24:49 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (7.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 54ms (Views: 51.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pictures/new" for ::1 at 2020-01-26 11:24:51 +0900
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/_form.html.erb (4.0ms)
+  Rendered pictures/new.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 65ms (Views: 62.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/pictures/confirm" for ::1 at 2020-01-26 11:24:57 +0900
+Processing by PicturesController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ReHz4Gh6trXLluopBbEnb8ztMu7XbMvxEjJ1CkVXtq8jWVJ9ovGCozhuck0ytMNhc3faicAhYsCh9/Jv9+BvQ==", "picture"=>{"title"=>"デーブ君", "content"=>"届いてる？", "image"=>"", "user_id"=>""}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering pictures/confirm.html.erb within layouts/application
+  Rendered pictures/confirm.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 45ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/pictures" for ::1 at 2020-01-26 11:24:59 +0900
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1CYK1uO191s5ArVh11qgjP6ZP6M7PU9Z5XmcaG7laLh54rcQTXg5Rkvp35Y6vr2Wx6v0ITmUYBZAc6BFnZBy3Q==", "picture"=>{"title"=>"デーブ君", "content"=>"届いてる？"}, "commit"=>"登録する"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pictures_controller.rb:33
+  [1m[36mPicture Create (1.3ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "デーブ君"], ["content", "届いてる？"], ["user_id", 1], ["created_at", "2020-01-26 11:24:59.266775"], ["updated_at", "2020-01-26 11:24:59.266775"]]
+  ↳ app/controllers/pictures_controller.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pictures_controller.rb:33
+  Rendering picture_mailer/picture_mail.html.erb within layouts/mailer
+  Rendered picture_mailer/picture_mail.html.erb within layouts/mailer (0.5ms)
+PictureMailer#picture_mail: processed outbound mail in 117.4ms
+Sent mail to makoto1850@gmail.com (28.3ms)
+Date: Sun, 26 Jan 2020 11:24:59 +0900
+From: from@example.com
+To: makoto1850@gmail.com
+Message-ID: <5e2cf87b610f0_109ed3fc52d0e11a416790@mbp.local.mail>
+Subject: =?UTF-8?Q?=E3=81=8A=E5=95=8F=E3=81=84=E5=90=88=E3=82=8F=E3=81=9B=E3=81=AE=E7=A2=BA=E8=AA=8D=E3=83=A1=E3=83=BC=E3=83=AB?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCiAgPGhlYWQ+DQogICAgPG1ldGEg
+aHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7
+IGNoYXJzZXQ9dXRmLTgiIC8+DQogICAgPHN0eWxlPg0KICAgICAgLyogRW1h
+aWwgc3R5bGVzIG5lZWQgdG8gYmUgaW5saW5lICovDQogICAgPC9zdHlsZT4N
+CiAgPC9oZWFkPg0KDQogIDxib2R5Pg0KICAgIDxoMT7jgYrllY/jgYTlkIjj
+go/jgZvjgYzlrozkuobjgZfjgb7jgZfjgZ/vvIE8L2gxPg0KDQo8aDQ+bmFt
+ZTogc2hpYmFvPC9oND4NCg0KPGg0PuOBiuWVj+OBhOWQiOOCj+OBm+WGheWu
+ueOBrueiuuiqjTwvaDQ+DQoNCjxwPmNvbnRlbnQ6IOWxiuOBhOOBpuOCi++8
+nzwvcD4NCg0KICA8L2JvZHk+DQo8L2h0bWw+DQo=
+
+Redirected to http://localhost:3000/pictures/6
+Completed 302 Found in 156ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/pictures/6" for ::1 at 2020-01-26 11:24:59 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPicture Load (0.7ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:77
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.4ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 1], ["picture_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 77ms (Views: 67.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-26 11:26:11 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (9.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 75ms (Views: 70.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/letter_opener" for ::1 at 2020-01-26 11:26:17 +0900
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (3.1ms)
+Completed 200 OK in 73ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580005499_4000158_44a7275/rich" for ::1 at 2020-01-26 11:26:19 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580005499_4000158_44a7275", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580002887_105234_261b066/rich" for ::1 at 2020-01-26 11:26:21 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580002887_105234_261b066", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580005499_4000158_44a7275/rich" for ::1 at 2020-01-26 11:26:22 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580005499_4000158_44a7275", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580002887_105234_261b066/rich" for ::1 at 2020-01-26 11:26:26 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580002887_105234_261b066", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580002887_105234_261b066/rich" for ::1 at 2020-01-26 11:26:26 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580002887_105234_261b066", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580005499_4000158_44a7275/rich" for ::1 at 2020-01-26 11:26:30 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580005499_4000158_44a7275", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580002887_105234_261b066/rich" for ::1 at 2020-01-26 11:26:31 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580002887_105234_261b066", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-26 11:26:41 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (6.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 157ms (Views: 154.9ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/pictures/6" for ::1 at 2020-01-26 11:26:45 +0900
+Processing by PicturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IJIs72zQS62qIWQhXH4ynu+MW7HlYBeINwzOgecO6yGNVpEpwh2FsNjKDtaxmi+E1r6QM+fJOMeSBvKsFHvxRA==", "id"=>"6"}
+  [1m[36mPicture Load (1.1ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:77
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pictures_controller.rb:62
+  [1m[36mFavorite Load (0.6ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."picture_id" = $1[0m  [["picture_id", 6]]
+  ↳ app/controllers/pictures_controller.rb:62
+  [1m[36mPicture Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/pictures_controller.rb:62
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pictures_controller.rb:62
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 9ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-26 11:26:45 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (7.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pictures/new" for ::1 at 2020-01-26 11:30:26 +0900
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/_form.html.erb (36.0ms)
+  Rendered pictures/new.html.erb within layouts/application (39.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 725ms (Views: 661.7ms | ActiveRecord: 29.0ms)
+
+
+Started POST "/pictures/confirm" for ::1 at 2020-01-26 11:30:35 +0900
+Processing by PicturesController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8irVREW1ysBLPdiXPXTqV19dif5FJp4pEdbK7WhZrE+7sDfCMp/mEBDyOvatqP3HZaPiX9l7qI3XGdzw/pNzKA==", "picture"=>{"title"=>"デーブ君", "content"=>"届いてる？", "image"=>"", "user_id"=>""}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering pictures/confirm.html.erb within layouts/application
+  Rendered pictures/confirm.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 156ms (Views: 113.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pictures" for ::1 at 2020-01-26 11:30:36 +0900
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kEHLkDbTmHI2XeKZjJ0cJkXTI61g7KK3kdvuuNph/LI9hXZWmB5Wb0S2iG5heQE8fOHoL2JFjfg00dKVKRTm1w==", "picture"=>{"title"=>"デーブ君", "content"=>"届いてる？"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pictures_controller.rb:33
+  [1m[36mPicture Create (3.1ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "デーブ君"], ["content", "届いてる？"], ["user_id", 1], ["created_at", "2020-01-26 11:30:36.481011"], ["updated_at", "2020-01-26 11:30:36.481011"]]
+  ↳ app/controllers/pictures_controller.rb:33
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pictures_controller.rb:33
+  Rendering picture_mailer/picture_mail.html.erb within layouts/mailer
+  Rendered picture_mailer/picture_mail.html.erb within layouts/mailer (0.8ms)
+PictureMailer#picture_mail: processed outbound mail in 112.6ms
+Sent mail to makoto1850@gmail.com (20.9ms)
+Date: Sun, 26 Jan 2020 11:30:36 +0900
+From: from@example.com
+To: makoto1850@gmail.com
+Message-ID: <5e2cf9ccd9942_10acf3fde37e35d8c405df@mbp.local.mail>
+Subject: =?UTF-8?Q?=E3=81=8A=E5=95=8F=E3=81=84=E5=90=88=E3=82=8F=E3=81=9B=E3=81=AE=E7=A2=BA=E8=AA=8D=E3=83=A1=E3=83=BC=E3=83=AB?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCiAgPGhlYWQ+DQogICAgPG1ldGEg
+aHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7
+IGNoYXJzZXQ9dXRmLTgiIC8+DQogICAgPHN0eWxlPg0KICAgICAgLyogRW1h
+aWwgc3R5bGVzIG5lZWQgdG8gYmUgaW5saW5lICovDQogICAgPC9zdHlsZT4N
+CiAgPC9oZWFkPg0KDQogIDxib2R5Pg0KICAgIDxoMT7jgYrllY/jgYTlkIjj
+go/jgZvjgYzlrozkuobjgZfjgb7jgZfjgZ/vvIE8L2gxPg0KDQo8aDQ+bmFt
+ZTogc2hpYmFvPC9oND4NCg0KPGg0PuOBiuWVj+OBhOWQiOOCj+OBm+WGheWu
+ueOBrueiuuiqjTwvaDQ+DQoNCjxwPmNvbnRlbnQ6IOWxiuOBhOOBpuOCi++8
+nzwvcD4NCg0KICA8L2JvZHk+DQo8L2h0bWw+DQo=
+
+Redirected to http://localhost:3000/pictures/7
+Completed 302 Found in 433ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/pictures/7" for ::1 at 2020-01-26 11:30:36 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPicture Load (2.5ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:77
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.8ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 1], ["picture_id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:18
+  Rendered pictures/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 456ms (Views: 407.4ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-26 11:30:56 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.8ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (9.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 166ms (Views: 157.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/letter_opener" for ::1 at 2020-01-26 11:30:59 +0900
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (1.9ms)
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580005836_893429_94086d6/rich" for ::1 at 2020-01-26 11:31:00 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580005836_893429_94086d6", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580005499_4000158_44a7275/rich" for ::1 at 2020-01-26 11:31:04 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580005499_4000158_44a7275", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580002887_105234_261b066/rich" for ::1 at 2020-01-26 11:31:04 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580002887_105234_261b066", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580005499_4000158_44a7275/rich" for ::1 at 2020-01-26 11:31:05 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580005499_4000158_44a7275", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580005836_893429_94086d6/rich" for ::1 at 2020-01-26 11:31:06 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580005836_893429_94086d6", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580005499_4000158_44a7275/rich" for ::1 at 2020-01-26 11:31:14 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580005499_4000158_44a7275", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580002887_105234_261b066/rich" for ::1 at 2020-01-26 11:31:15 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580002887_105234_261b066", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580005499_4000158_44a7275/rich" for ::1 at 2020-01-26 11:31:15 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580005499_4000158_44a7275", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580005836_893429_94086d6/rich" for ::1 at 2020-01-26 11:31:16 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580005836_893429_94086d6", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580005499_4000158_44a7275/rich" for ::1 at 2020-01-26 11:31:18 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580005499_4000158_44a7275", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580005836_893429_94086d6/rich" for ::1 at 2020-01-26 11:31:19 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580005836_893429_94086d6", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/pictures/7" for ::1 at 2020-01-26 11:31:59 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PicturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"g1igHDFLkPgU8Q1WjUPpDbUNhwxenUMdHPSD23i8AwYunB3an4Ze5WYaZ6Fgp/QXjD9Mjlw0bFK5/r/2i8kZYw==", "id"=>"7"}
+  [1m[36mPicture Load (3.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:77
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pictures_controller.rb:62
+  [1m[36mFavorite Load (0.3ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."picture_id" = $1[0m  [["picture_id", 7]]
+  ↳ app/controllers/pictures_controller.rb:62
+  [1m[36mPicture Destroy (0.3ms)[0m  [1m[31mDELETE FROM "pictures" WHERE "pictures"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/pictures_controller.rb:62
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pictures_controller.rb:62
+Redirected to http://localhost:3000/pictures
+Completed 302 Found in 118ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-26 11:31:59 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.3ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (39.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 401ms (Views: 395.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/pictures/new" for ::1 at 2020-01-26 11:32:00 +0900
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/_form.html.erb (16.6ms)
+  Rendered pictures/new.html.erb within layouts/application (18.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 75ms (Views: 72.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pictures/confirm" for ::1 at 2020-01-26 11:32:07 +0900
+Processing by PicturesController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sVNJYEMxgjiOfdaLN8C0yK6OlZx6e+wDn4sGeIZfToP4yavmNBuu6NWyNOqnHKNYlHD+PeYm2qdZRBBlEJWR5A==", "picture"=>{"title"=>"テスト", "content"=>"テストです", "image"=>"", "user_id"=>""}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering pictures/confirm.html.erb within layouts/application
+  Rendered pictures/confirm.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 91ms (Views: 86.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/pictures" for ::1 at 2020-01-26 11:32:09 +0900
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C2JE+LnIRvftxBUpQVsCVUnjGWzSbhhBKUd16g3iUJampvk+FwWI6p8vf96svx9PcNHS7tDHNw6MTUnH/pdK8w==", "picture"=>{"title"=>"テスト", "content"=>"テストです"}, "commit"=>"登録する"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pictures_controller.rb:33
+  [1m[36mPicture Create (0.9ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "content", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "テスト"], ["content", "テストです"], ["user_id", 1], ["created_at", "2020-01-26 11:32:09.060200"], ["updated_at", "2020-01-26 11:32:09.060200"]]
+  ↳ app/controllers/pictures_controller.rb:33
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pictures_controller.rb:33
+  Rendering picture_mailer/picture_mail.html.erb within layouts/mailer
+  Rendered picture_mailer/picture_mail.html.erb within layouts/mailer (0.7ms)
+PictureMailer#picture_mail: processed outbound mail in 87.7ms
+Sent mail to makoto1850@gmail.com (22.0ms)
+Date: Sun, 26 Jan 2020 11:32:09 +0900
+From: from@example.com
+To: makoto1850@gmail.com
+Message-ID: <5e2cfa2960082_10b283fc12e101d589937@mbp.local.mail>
+Subject: =?UTF-8?Q?=E3=81=8A=E5=95=8F=E3=81=84=E5=90=88=E3=82=8F=E3=81=9B=E3=81=AE=E7=A2=BA=E8=AA=8D=E3=83=A1=E3=83=BC=E3=83=AB?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCiAgPGhlYWQ+DQogICAgPG1ldGEg
+aHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7
+IGNoYXJzZXQ9dXRmLTgiIC8+DQogICAgPHN0eWxlPg0KICAgICAgLyogRW1h
+aWwgc3R5bGVzIG5lZWQgdG8gYmUgaW5saW5lICovDQogICAgPC9zdHlsZT4N
+CiAgPC9oZWFkPg0KDQogIDxib2R5Pg0KICAgIDxoMT7jgYrllY/jgYTlkIjj
+go/jgZvjgYzlrozkuobjgZfjgb7jgZfjgZ/vvIE8L2gxPg0KDQo8aDQ+bmFt
+ZTogc2hpYmFvPC9oND4NCg0KPGg0PuOBiuWVj+OBhOWQiOOCj+OBm+WGheWu
+ueOBrueiuuiqjTwvaDQ+DQoNCjxwPmNvbnRlbnQ6IOODhuOCueODiOOBp+OB
+mTwvcD4NCg0KICA8L2JvZHk+DQo8L2h0bWw+DQo=
+
+Redirected to http://localhost:3000/pictures/8
+Completed 302 Found in 355ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/pictures/8" for ::1 at 2020-01-26 11:32:09 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:77
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (0.2ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 1], ["picture_id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:13
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:18
+  Rendered pictures/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 63ms (Views: 55.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pictures" for ::1 at 2020-01-26 11:32:12 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.2ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (5.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 75ms (Views: 73.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/letter_opener" for ::1 at 2020-01-26 11:32:15 +0900
+Processing by LetterOpenerWeb::LettersController#index as HTML
+  Rendering /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters
+  Rendered /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/letter_opener_web-1.3.4/app/views/letter_opener_web/letters/index.html.erb within layouts/letter_opener_web/letters (2.5ms)
+Completed 200 OK in 114ms (Views: 103.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/letter_opener/1580005929_395879_8068297/rich" for ::1 at 2020-01-26 11:32:15 +0900
+Processing by LetterOpenerWeb::LettersController#show as HTML
+  Parameters: {"id"=>"1580005929_395879_8068297", "style"=>"rich"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pictures/confirm" for ::1 at 2020-01-26 11:32:27 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mPicture Load (0.4ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:77
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Picture with 'id'=confirm):
+  
+app/controllers/pictures_controller.rb:77:in `set_picture'

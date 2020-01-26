@@ -28,6 +28,7 @@ gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 
 group :development, :test do
+
   gem 'dotenv-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -39,6 +40,8 @@ group :development do
 
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem 'letter_opener_web'
 end
 
 group :test do
