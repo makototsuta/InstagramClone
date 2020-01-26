@@ -4011,3 +4011,331 @@ Processing by PicturesController#index as HTML
 Completed 200 OK in 404ms (Views: 377.1ms | ActiveRecord: 7.0ms)
 
 
+Started GET "/pictures" for ::1 at 2020-01-26 16:39:39 +0900
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (0.8ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pictures/index.html.erb:21
+  Rendered pictures/index.html.erb within layouts/application (86.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 551ms (Views: 519.0ms | ActiveRecord: 12.1ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "マタドガス"], ["email", "cesar@block.name"], ["password_digest", "$2a$10$KZk1WQKR4a.t6fCoAR8WEu91iswj4HX4IPOFKEpml3LP1XHqWxFNm"], ["created_at", "2020-01-26 16:52:29.222175"], ["updated_at", "2020-01-26 16:52:29.222175"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "オムスター"], ["email", "doreatha_reichel@mantestreich.io"], ["password_digest", "$2a$10$tRhFuNsd0UowDl8GL5aHm.NSy.s5p9ruqscLJaMIMYDC/zaEBxxaO"], ["created_at", "2020-01-26 16:52:29.283292"], ["updated_at", "2020-01-26 16:52:29.283292"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ダグトリオ"], ["email", "kimberley_homenick@labadie.org"], ["password_digest", "$2a$10$8P6GtnoI5f3tR1xadQbj3uzENCeIZGYBgNqD/e8ufjvcKfufkV2v6"], ["created_at", "2020-01-26 16:52:29.346473"], ["updated_at", "2020-01-26 16:52:29.346473"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "カモネギ"], ["email", "leonel_shanahan@klockomayert.com"], ["password_digest", "$2a$10$hI4gzpBt34CnwYIjcYYr9ewoOBUmEkRy5ToNxh5b4CoDmLoac/pgy"], ["created_at", "2020-01-26 16:52:29.407014"], ["updated_at", "2020-01-26 16:52:29.407014"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ハリーセン"], ["email", "queenie.spencer@cronin.net"], ["password_digest", "$2a$10$JV11ttz9YG7NX5s6iXaeA.XXlWTXpKX4n3Mt9pstgatV3VpNnrBHy"], ["created_at", "2020-01-26 16:52:29.463375"], ["updated_at", "2020-01-26 16:52:29.463375"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "モココ"], ["email", "rich@rippin.com"], ["password_digest", "$2a$10$MXW4sHWPY8b4wQ2OsDorIO0eowrV49ZHsQ0q/G1y.6mx1ibd/h3LS"], ["created_at", "2020-01-26 16:52:29.518648"], ["updated_at", "2020-01-26 16:52:29.518648"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ポニータ"], ["email", "vasiliki@romaguera.io"], ["password_digest", "$2a$10$rVdJZv7d2AYTbfmWl/4jjeS0Jw3xcu8gSZqV8ZilWDrDzEgl.ZMRG"], ["created_at", "2020-01-26 16:52:29.576318"], ["updated_at", "2020-01-26 16:52:29.576318"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ルージュラ"], ["email", "sheron.franecki@shields.co"], ["password_digest", "$2a$10$hKOgNUjmX7DaNBNzk8vDt.N7mEPnx3l1fxfm9SC53Pxha9zCmtdSu"], ["created_at", "2020-01-26 16:52:29.637822"], ["updated_at", "2020-01-26 16:52:29.637822"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "メノクラゲ"], ["email", "caondra@schumm.org"], ["password_digest", "$2a$10$8INS8A.ebS6ZS.pKk3xHYO/iWTtUmtujkwAQWD2yPhO6oWQQ7D3oO"], ["created_at", "2020-01-26 16:52:29.693451"], ["updated_at", "2020-01-26 16:52:29.693451"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ニドラン♀"], ["email", "boyce@macgyver.io"], ["password_digest", "$2a$10$cDOiCPbklMnuUN/nJlAkPunciTHPg5Vzj.W0CgulXyhkwhNPXg17S"], ["created_at", "2020-01-26 16:52:29.753593"], ["updated_at", "2020-01-26 16:52:29.753593"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "エアームド"], ["email", "bradly@dibbert.io"], ["password_digest", "$2a$10$fW2J2K6fh8N6UynKJXwALe76y1evN6S/33wZrPN6ViC4MWmrGoEIu"], ["created_at", "2020-01-26 16:52:29.812640"], ["updated_at", "2020-01-26 16:52:29.812640"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "プテラ"], ["email", "lelah_bednar@hackett.co"], ["password_digest", "$2a$10$tD0mbWfyUx1A6dkm4y6VLep8pbJOsSkxZ8syeMAdpbJ1rdTXT20Ka"], ["created_at", "2020-01-26 16:52:29.870588"], ["updated_at", "2020-01-26 16:52:29.870588"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "イワーク"], ["email", "virgil@luettgen.biz"], ["password_digest", "$2a$10$HekcFXG4wwL9FdTvzAVeiODDElEl5GZ4N9bHY2rVt.aNM/.q3jM.W"], ["created_at", "2020-01-26 16:52:29.926113"], ["updated_at", "2020-01-26 16:52:29.926113"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "オムナイト"], ["email", "diann@kemmer.name"], ["password_digest", "$2a$10$moDBAfKzjb90IiCIoyvAMuAzVCZc/Zjxw1LsfM0P3Bq.ceTy.IsEu"], ["created_at", "2020-01-26 16:52:29.986427"], ["updated_at", "2020-01-26 16:52:29.986427"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "カブトプス"], ["email", "stephenie@waelchi.name"], ["password_digest", "$2a$10$3I24tFALLCKBa6c2Xu2q0uEfFI8TPIxRk.v4PzAZT29w0Kj1LTiB6"], ["created_at", "2020-01-26 16:52:30.041486"], ["updated_at", "2020-01-26 16:52:30.041486"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ブルー"], ["email", "carie@johnstonraynor.co"], ["password_digest", "$2a$10$mSwiKkADYXao6xnsMyA2K.DWM58w9sGtxIowu/85DIN/gL41l0qZ."], ["created_at", "2020-01-26 16:52:30.096891"], ["updated_at", "2020-01-26 16:52:30.096891"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "サンダース"], ["email", "claire@hintzgottlieb.co"], ["password_digest", "$2a$10$4kmJdl8iyHQ4dMf7.SAYm.PhAKSrgFUlgsgyPNTQCjncGAUkywe9u"], ["created_at", "2020-01-26 16:52:30.152099"], ["updated_at", "2020-01-26 16:52:30.152099"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ピカチュウ"], ["email", "candida@kuhn.info"], ["password_digest", "$2a$10$iXRtdgf.BupLN1aoqQg4r.OkBV1jkgZthjX8i1ON.KNDJ.WxAcp.O"], ["created_at", "2020-01-26 16:52:30.212169"], ["updated_at", "2020-01-26 16:52:30.212169"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "メタモン"], ["email", "lilia.anderson@medhurstnicolas.net"], ["password_digest", "$2a$10$53BpTI9PTPgpEmLIsWfZSe0O/zqDr2JCnBMz84G9ir.RcFW3euj1S"], ["created_at", "2020-01-26 16:52:30.271488"], ["updated_at", "2020-01-26 16:52:30.271488"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ネイティオ"], ["email", "rod@runolfsdottirmcclure.co"], ["password_digest", "$2a$10$k/2Z6JgSsEOSfbgAzDZW3ursQ1s2Wq3/rYGNtlElOSBWKcbY5TvWy"], ["created_at", "2020-01-26 16:52:30.333735"], ["updated_at", "2020-01-26 16:52:30.333735"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "スターミー"], ["email", "sonny@kohyatt.net"], ["password_digest", "$2a$10$VF9X3Zwfb3e4Uq4B0ydh1OW3vcca9Epzn.W33lClNAqBnMGLn0T4u"], ["created_at", "2020-01-26 16:52:30.388851"], ["updated_at", "2020-01-26 16:52:30.388851"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "オニスズメ"], ["email", "audry.hoeger@hirthe.co"], ["password_digest", "$2a$10$/nRk8lu3xkFQrinNDkC9y.X3a4dLHrvLYYrKKyMsTLrJrTnMeLdei"], ["created_at", "2020-01-26 16:52:30.444187"], ["updated_at", "2020-01-26 16:52:30.444187"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ニョロトノ"], ["email", "tracey@mayer.com"], ["password_digest", "$2a$10$RhXibpfK0agT5F8M4MgEzuX6ZhDBqczTryDgwSpls2dJlfe/bb3ji"], ["created_at", "2020-01-26 16:52:30.504369"], ["updated_at", "2020-01-26 16:52:30.504369"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "タッツー"], ["email", "chiquita.denesik@mohr.com"], ["password_digest", "$2a$10$nvObQg8zBYl.fmaTEvDJpuJDkuYFdNDeiUEYfdXBZbJal.qyZVY8q"], ["created_at", "2020-01-26 16:52:30.564919"], ["updated_at", "2020-01-26 16:52:30.564919"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ゴローン"], ["email", "kenny@wunsch.io"], ["password_digest", "$2a$10$wxjHbAayaIUI081fCwD4T.qRyCVvAEm6rBiIOnKMFcBx9bTkMrhKO"], ["created_at", "2020-01-26 16:52:30.622254"], ["updated_at", "2020-01-26 16:52:30.622254"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "トランセル"], ["email", "deandre.auer@dietrich.com"], ["password_digest", "$2a$10$KUI9UzvZQilFLaZvf2ZSeeU/C.KzTSokjEK6oruuFS1I09JyY1jVu"], ["created_at", "2020-01-26 16:52:30.688750"], ["updated_at", "2020-01-26 16:52:30.688750"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ネイティ"], ["email", "rafael.bruen@abshire.net"], ["password_digest", "$2a$10$/4MMpgwFf8eeyn.kVhbHPejgktfFxfUln71CfVYYMgBM6hUrzL72q"], ["created_at", "2020-01-26 16:52:30.754168"], ["updated_at", "2020-01-26 16:52:30.754168"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ニョロトノ"], ["email", "faustina_rosenbaum@klein.co"], ["password_digest", "$2a$10$Hy.w2wc6tfshq4PP3wrMcucyLVTDOJ.1nhtx16BdNpWBwP6537qEO"], ["created_at", "2020-01-26 16:52:30.812732"], ["updated_at", "2020-01-26 16:52:30.812732"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ピジョット"], ["email", "venus_kihn@abshire.biz"], ["password_digest", "$2a$10$End83Rt8y7MZVRWLz0Oomu7a8E1NgCkwOwMzg88/2sNZFj7UdwajS"], ["created_at", "2020-01-26 16:52:30.867901"], ["updated_at", "2020-01-26 16:52:30.867901"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ベトベター"], ["email", "miguel.bednar@reinger.com"], ["password_digest", "$2a$10$Z3i2wXsW2fhriYlWBnzmOeUmEU2mo1A18Y0M7h80cu2WEE2ObG.OG"], ["created_at", "2020-01-26 16:52:30.923230"], ["updated_at", "2020-01-26 16:52:30.923230"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ニドクイン"], ["email", "doretha@cummerata.name"], ["password_digest", "$2a$10$r52PlPtTXEg5.FLGp5emEu1htccr6Yh801.oeiZlGJZlCaU9P.Rjy"], ["created_at", "2020-01-26 16:52:30.983178"], ["updated_at", "2020-01-26 16:52:30.983178"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "マグマラシ"], ["email", "coleen_cartwright@oconnellraynor.net"], ["password_digest", "$2a$10$JoFKPM8WNhbgdx4Vrmr9Muf1RtzvmceE1pWQ8HnuRtgBduogNdMO2"], ["created_at", "2020-01-26 16:52:31.041398"], ["updated_at", "2020-01-26 16:52:31.041398"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "シェルダー"], ["email", "adolfo.schimmel@erdman.name"], ["password_digest", "$2a$10$odME1ioFVZ9PDGlBX6XP5ukXs1lirWiffqJb7hYZcVRAxFzM.QQuu"], ["created_at", "2020-01-26 16:52:31.097300"], ["updated_at", "2020-01-26 16:52:31.097300"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "オムスター"], ["email", "cody.weinat@ko.biz"], ["password_digest", "$2a$10$oGeGDqbcgHnHWq9mX4Hra.CwVdj6x/GZamJjacEGEcYiqXTSGrIFS"], ["created_at", "2020-01-26 16:52:31.154533"], ["updated_at", "2020-01-26 16:52:31.154533"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ヒノアラシ"], ["email", "twila@feest.net"], ["password_digest", "$2a$10$2OF212VN80q0v1TwVYHFgORhjNs4Z5qGL1pc3vlk5oJe.d.B.Wwoy"], ["created_at", "2020-01-26 16:52:31.214659"], ["updated_at", "2020-01-26 16:52:31.214659"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "エンテイ"], ["email", "vicente@hyatthaley.name"], ["password_digest", "$2a$10$qEB3UodvR3Nb1tkTMfMdc.MEEzvTQbezEXCfxV6ATMjL36SMfC3LW"], ["created_at", "2020-01-26 16:52:31.269907"], ["updated_at", "2020-01-26 16:52:31.269907"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ピッピ"], ["email", "edgardo_nikolaus@ferry.co"], ["password_digest", "$2a$10$R1hO48TTP5TG9dcYIGo04uU64rKmPvMQ1X3O1U8Ue2RbzoB3LB2NS"], ["created_at", "2020-01-26 16:52:31.332157"], ["updated_at", "2020-01-26 16:52:31.332157"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "トゲピー"], ["email", "nyla_kohler@kirlin.name"], ["password_digest", "$2a$10$zoQv1IRG0HQW1f3aM8C6FegR7QYnexZsYHmvh.b7YCYQTpyYX6qgW"], ["created_at", "2020-01-26 16:52:31.387277"], ["updated_at", "2020-01-26 16:52:31.387277"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "バンギラス"], ["email", "max@rogahn.co"], ["password_digest", "$2a$10$Z/rAVXtt8/2tLx5Pk0HhGO3UnZXdlMgivuBImByNqjRCCORbUMEwu"], ["created_at", "2020-01-26 16:52:31.444611"], ["updated_at", "2020-01-26 16:52:31.444611"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ミュウ"], ["email", "beaulah.funk@walshmaggio.info"], ["password_digest", "$2a$10$HcWRj8XB833pO4BiiJQPkODKqYWYfmMIzgjux6JgYEbbqg/CVZquq"], ["created_at", "2020-01-26 16:52:31.499978"], ["updated_at", "2020-01-26 16:52:31.499978"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "プリン"], ["email", "winifred@medhurst.co"], ["password_digest", "$2a$10$wqj.1d.KNFDNCq1X59y9bOkDfNtzejWqA7iYSdhH.StmzWAG4gWIK"], ["created_at", "2020-01-26 16:52:31.556366"], ["updated_at", "2020-01-26 16:52:31.556366"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ヤドキング"], ["email", "kathlyn_roob@heller.com"], ["password_digest", "$2a$10$88qCbCeFKMtddsCUjjp.OuXMD/yeT7ZieJSsrss9oCHVh1BgGldAK"], ["created_at", "2020-01-26 16:52:31.619589"], ["updated_at", "2020-01-26 16:52:31.619589"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "アリアドス"], ["email", "felipe@raynor.net"], ["password_digest", "$2a$10$Q4dSNDzjAPPPgGuJMA5tkOl4/QABA/1cH6cMMNoPuYSMQV3IeeRhy"], ["created_at", "2020-01-26 16:52:31.684161"], ["updated_at", "2020-01-26 16:52:31.684161"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "マダツボミ"], ["email", "duncan.swaniawski@nikolaus.name"], ["password_digest", "$2a$10$nNWSy4nDjjQO2HWUqWB0r.IEFoJ1KtNn/1XLXpK0KMchyrjHUz1Sy"], ["created_at", "2020-01-26 16:52:31.739634"], ["updated_at", "2020-01-26 16:52:31.739634"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ゴースト"], ["email", "forest.yost@feest.biz"], ["password_digest", "$2a$10$bW3Bjhd0Xi./fcXXdZ.4zuFRrIg45PmgCePgG1YawtR.HvxxLTcsO"], ["created_at", "2020-01-26 16:52:31.799279"], ["updated_at", "2020-01-26 16:52:31.799279"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "マグマラシ"], ["email", "garrett.cole@spencerbrown.name"], ["password_digest", "$2a$10$ESZ8U3BlqCZcirdzSnY55eF2wecQV8kEjIG/mNRw8mM8BVPEndZcu"], ["created_at", "2020-01-26 16:52:31.854712"], ["updated_at", "2020-01-26 16:52:31.854712"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ブルー"], ["email", "tajuana@hand.co"], ["password_digest", "$2a$10$mDcNEOGPn2i65opWBlJfbetJazgS03bx/0XFxm8VDAkBH6z.T/4LO"], ["created_at", "2020-01-26 16:52:31.910032"], ["updated_at", "2020-01-26 16:52:31.910032"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "マグマラシ"], ["email", "magnolia_nader@mcclure.info"], ["password_digest", "$2a$10$KKDx0n6WcveQgho21WRK.Oymc8QmDbEkK8I8AKLSjoUE38hJ40Ns2"], ["created_at", "2020-01-26 16:52:31.965313"], ["updated_at", "2020-01-26 16:52:31.965313"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ハッサム"], ["email", "franklyn.armstrong@konopelski.co"], ["password_digest", "$2a$10$XefHrLZAckshAbUtusmvlOVjkhzd4IDhfNtmBRnJLA9R5gFszTZ5."], ["created_at", "2020-01-26 16:52:32.020763"], ["updated_at", "2020-01-26 16:52:32.020763"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "パウワウ"], ["email", "warner.auer@ryanschmeler.com"], ["password_digest", "$2a$10$09AbHGE124dvfpSFiqdToeDoL6mL/zB1DGDCKh/CG4m97tOHRO3b6"], ["created_at", "2020-01-26 16:52:32.081547"], ["updated_at", "2020-01-26 16:52:32.081547"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (9.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
