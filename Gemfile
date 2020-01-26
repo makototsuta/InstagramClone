@@ -16,6 +16,8 @@ gem 'bcrypt', '3.1.11'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'faker'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'dotenv-rails'
