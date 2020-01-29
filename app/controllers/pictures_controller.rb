@@ -1,5 +1,6 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
+  before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
   # GET /pictures
   # GET /pictures.json
@@ -79,6 +80,13 @@ class PicturesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_picture
       @picture = Picture.find(params[:id])
+    end
+
+    def ensure_correct_user
+      if @picture.user_id != current_user.id
+        flash[:notice] = "権限がありません"
+        redirect_to pictures_url
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
