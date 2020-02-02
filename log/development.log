@@ -20753,3 +20753,91 @@ Processing by PicturesController#index as HTML
 Completed 200 OK in 73ms (Views: 69.7ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/pictures/new" for ::1 at 2020-02-03 08:36:00 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/tsutamasato/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PicturesController#new as HTML
+  Rendering pictures/new.html.erb within layouts/application
+  Rendered pictures/_form.html.erb (317.9ms)
+  Rendered pictures/new.html.erb within layouts/application (342.1ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 842ms (Views: 798.6ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/pictures/confirm" for ::1 at 2020-02-03 08:36:14 +0900
+Processing by PicturesController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dlKzBR7oGqvkCR2tuezoMLrwsWIMHOpzcBchKexjud0/yFGDacI2e7/G/8wpMP+ggA7aw5BB3Ne22Dc0eqlmug==", "picture"=>{"title"=>"2", "content"=>"222", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007febf3a142f8 @tempfile=#<Tempfile:/var/folders/qy/cxwnxn712y3bkrngmnctgylm0000gn/T/RackMultipart20200203-21690-71s4vd.JPG>, @original_filename="DSC_0293.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"picture[image]\"; filename=\"DSC_0293.JPG\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering pictures/confirm.html.erb within layouts/application
+  Rendered pictures/confirm.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 115ms (Views: 70.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pictures" for ::1 at 2020-02-03 08:36:17 +0900
+Processing by PicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W9wf2iE4UT2yzyuGbS/FTpMPfYiT0oayMPpm6vjWWhX2GKIcj/WfIMAkQXGAy9hUqj22CpF7qf2V8FrHC6NAcA==", "picture"=>{"title"=>"2", "content"=>"222", "image_cache"=>"1580686574-216794741792702-0001-9091/DSC_0293.JPG"}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/pictures_controller.rb:40
+  [1m[36mPicture Create (3.1ms)[0m  [1m[32mINSERT INTO "pictures" ("title", "content", "image", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "2"], ["content", "222"], ["image", "DSC_0293.JPG"], ["user_id", 2], ["created_at", "2020-02-03 08:36:17.167342"], ["updated_at", "2020-02-03 08:36:17.167342"]]
+  ↳ app/controllers/pictures_controller.rb:40
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/pictures_controller.rb:40
+  Rendering picture_mailer/picture_mail.html.erb within layouts/mailer
+  Rendered picture_mailer/picture_mail.html.erb within layouts/mailer (0.7ms)
+PictureMailer#picture_mail: processed outbound mail in 84.0ms
+Sent mail to makoto1850@gmail.com (21.8ms)
+Date: Mon, 03 Feb 2020 08:36:17 +0900
+From: from@example.com
+To: makoto1850@gmail.com
+Message-ID: <5e375cf1a0a39_54ba3ff5f9b6c2e837322@mbp.local.mail>
+Subject: =?UTF-8?Q?=E3=81=8A=E5=95=8F=E3=81=84=E5=90=88=E3=82=8F=E3=81=9B=E3=81=AE=E7=A2=BA=E8=AA=8D=E3=83=A1=E3=83=BC=E3=83=AB?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCiAgPGhlYWQ+DQogICAgPG1ldGEg
+aHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7
+IGNoYXJzZXQ9dXRmLTgiIC8+DQogICAgPHN0eWxlPg0KICAgICAgLyogRW1h
+aWwgc3R5bGVzIG5lZWQgdG8gYmUgaW5saW5lICovDQogICAgPC9zdHlsZT4N
+CiAgPC9oZWFkPg0KDQogIDxib2R5Pg0KICAgIDxoMT7jgYrllY/jgYTlkIjj
+go/jgZvjgYzlrozkuobjgZfjgb7jgZfjgZ/vvIE8L2gxPg0KDQo8aDQ+bmFt
+ZTogbWFrb3RvPC9oND4NCg0KPGg0PuOBiuWVj+OBhOWQiOOCj+OBm+WGheWu
+ueOBrueiuuiqjTwvaDQ+DQoNCjxwPmNvbnRlbnQ6IDIyMjwvcD4NCg0KICA8
+L2JvZHk+DQo8L2h0bWw+DQo=
+
+Redirected to http://localhost:3000/pictures/18
+Completed 302 Found in 511ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/pictures/18" for ::1 at 2020-02-03 08:36:17 +0900
+Processing by PicturesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPicture Load (5.0ms)[0m  [1m[34mSELECT  "pictures".* FROM "pictures" WHERE "pictures"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:88
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mFavorite Load (1.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."picture_id" = $2 LIMIT $3[0m  [["user_id", 2], ["picture_id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/pictures_controller.rb:15
+  Rendering pictures/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pictures/show.html.erb:20
+  Rendered pictures/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 161ms (Views: 139.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/pictures" for ::1 at 2020-02-03 08:36:20 +0900
+Processing by PicturesController#index as HTML
+  Rendering pictures/index.html.erb within layouts/application
+  [1m[36mPicture Load (2.6ms)[0m  [1m[34mSELECT "pictures".* FROM "pictures"[0m
+  ↳ app/views/pictures/index.html.erb:9
+  Rendered pictures/index.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 124ms (Views: 119.0ms | ActiveRecord: 3.0ms)
+
+
