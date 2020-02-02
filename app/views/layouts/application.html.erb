@@ -5,22 +5,67 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, class: "#{key}") %>
-    <% end %>
-
-    <% if logged_in? %>
-      <%= link_to "Profile", user_path(current_user.id) %>
-      <%= link_to "Logout", session_path(current_user.id), method: :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_path %>
-      <%= link_to "Login", new_session_path %>
-    <% end %>
+    <header>
+      <div class="container">
+        <div class="row head">
+          <a href="#" class="logo"><i class="fab fa-instagram fa-2x"></i><img src="/assets/insta.svg.png" alt=""></a>
+          <form class="" action="index.html" method="post">
+            <input type="search" name="" value="検索">
+          </form>
+          <div class="d-none d-md-block">
+            <ul>
+              <li>
+                <% if current_user.present? %>
+                  <%= link_to 'お気に入り', favorites_path %>
+                <% end %>
+              </li>
+              <li>
+                <% if logged_in? %>
+                  <%= link_to "Profile", user_path(current_user.id) %>
+                  <%= link_to "Logout", session_path(current_user.id), method: :delete %>
+                <% else %>
+                  <%= link_to "Sign up", new_user_path %>
+                  <%= link_to "Login", new_session_path %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <article>
+      <div class="container">
+        <div class="row article">
+          <div class="introduction">
+              <% if current_user.present? %>
+                <% unless current_user.image.url.blank? %>
+                  <a href="#"><%= image_tag(current_user.image.url) %></a>
+                <% end %>
+              <% end %>
+            <ul>
+              <% if current_user.present? %>
+                <li class="name">#<%= current_user.name %></li>
+              <% end %>
+              <li class="post">投稿123件</li>
+              <li><button type="button" class="btn btn-primary">フォローする</button></li>
+              <li class="hash">関連するハッシュタグ<a href="#">#aaa</a><a href="#">#bbb</a><a href="#">#ccc</a><a href="#">#ddd</a></li>
+              <li>
+                <% flash.each do |key, value| %>
+                  <%= content_tag(:div, value, class: "#{key}") %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
 
     <%= yield %>
   </body>

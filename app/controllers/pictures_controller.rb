@@ -11,7 +11,9 @@ class PicturesController < ApplicationController
   # GET /pictures/1
   # GET /pictures/1.json
   def show
-    @favorite = current_user.favorites.find_by(picture_id: @picture.id)
+    if current_user.present?
+      @favorite = current_user.favorites.find_by(picture_id: @picture.id)
+    end
   end
 
   # GET /pictures/new
@@ -72,8 +74,12 @@ class PicturesController < ApplicationController
   end
 
   def confirm
-    @picture = current_user.pictures.build(picture_params)
-    render :new if @picture.invalid?
+    if current_user.present?
+      @picture = current_user.pictures.build(picture_params)
+      render :new if @picture.invalid?
+    else
+      redirect_to new_session_path
+    end
   end
 
   private

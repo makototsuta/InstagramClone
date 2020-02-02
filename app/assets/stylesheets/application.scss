@@ -16,3 +16,143 @@
 
  // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
+a, p, span, input {
+  font-family: tahoma;
+}
+
+.sign a{
+  color: black;
+}
+
+header {
+  height: 90px;
+  border-bottom: 1px solid #dbdbdb;
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.logo {
+  margin-top: 30px;
+  color: black;
+}
+
+.logo i {
+  padding-right: 15px;
+  border-right: 1px solid gray;
+}
+
+.logo img {
+  height: 50px;
+  width: 130px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+header form {
+  margin:0 auto;
+  margin-top: 30px;
+}
+
+header form input {
+  background-color: #fafafa;
+  width: 230px;
+  height: 30px;
+  border-radius: 2px;
+  border: 0.5px solid #aeaeae;
+  color: #aeaeae;
+  font-size: 15px;
+  text-align: center;
+}
+
+header ul {
+  margin-top: 30px;
+}
+
+header ul li {
+  list-style: none;
+  display: inline;
+}
+
+header ul li a {
+  padding-left: 10px;
+  color:gray;
+}
+
+.introduction {
+  float: left;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.introduction img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px 10px;
+  float: left;
+  margin-right: 40px;
+}
+
+.name {
+  font-size: 25px;
+}
+
+article ul li {
+  list-style: none;
+}
+
+article ul li a {
+  font-size: 15px;
+}
+
+.hash {
+  color: gray;
+}
+
+.btn {
+  margin : 25px 0 25px 0;
+}
+
+.hash a {
+  padding-left: 10px;
+  color:#6582a2;
+}
+
+.main-section {
+  margin-top: 50px;
+}
+
+.sentence p {
+  font-size: 15px;
+  color: gray;
+  float: left;
+}
+
+.sentence a {
+  font-size: 15px;
+  color: gray;
+  padding-left: 10px;
+  float: left;
+}
+
+.main-section img {
+  float: left;
+  width: 30%;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+p img {
+  width: 200px;
+  height: 100px;
+}
+
+form img {
+  width: 200px;
+  height: 100px;
+}
