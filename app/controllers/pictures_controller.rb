@@ -100,3 +100,5 @@ class PicturesController < ApplicationController
       params.require(:picture).permit(:title, :content, :image, :image_cache, :user_id)
     end
 end
+
+1
